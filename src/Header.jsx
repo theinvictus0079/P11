@@ -50,7 +50,7 @@ const Header = ({
               
             >
               <div className="text-red-700 flex justify-evenly items-start ">
-              <div className=" italic">The_Invictus</div>
+              <div className=" italic">alisha_codes</div>
               <div onClick={toggleItems} className="ml-32">{showItems ? <RxCross2 /> : <CiMenuBurger />}</div>
               </div>
                
