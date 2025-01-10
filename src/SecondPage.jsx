@@ -11,8 +11,7 @@ const SecondPage = () => {
     "typescript",
     "dart",
     "GO",
-    
-    
+
   ];
 
   const FrameWork = ["react.js", "node.js", "express.js", "next.js", "django", "numpy", "pandas"];
@@ -36,9 +35,9 @@ const SecondPage = () => {
           {/* heading */}
           <div className="text-white  text-3xl font-bold">Languages</div>
           {/* box */}
-          <div className="mt-9 flex flex-wrap gap-5 justify-center items-center w-[400px]  md:w-[500px]">
+          <div className=" mt-9 flex flex-wrap gap-5 justify-center items-center w-[400px]  md:w-[500px]">
             {Language.map((language, index) => (
-              <div key={index}>
+              <div  className="animate-slide-in-left" key={index}>
                 <Skill data={language} />
               </div>
             ))}
@@ -48,11 +47,11 @@ const SecondPage = () => {
         {/* framework */}
         <div className=" flex flex-col justify-center items-center  ">
           {/* heading */}
-          <div className="text-white  text-3xl font-bold">
+          <div className="text-white  text-3xl font-bold animate-slide-in-left">
             Frameworks and Libraries
           </div>
           {/* box */}
-          <div className="mt-9 flex flex-wrap gap-5 justify-center items-center w-[400px]  md:w-[500px]">
+          <div className="mt-9 flex flex-wrap gap-5 justify-center items-center w-[400px]  md:w-[500px] animate-slide-in-right">
             {FrameWork.map((language, index) => (
               <div key={index}>
                 <Skill data={language} />

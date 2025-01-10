@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "motion/react";
 
 const Skill = ({data}) => {
   return (
@@ -81,9 +82,14 @@ const Skill = ({data}) => {
         </style>
 
        
-<button className='skillbutton'>
+<motion.button
+initial={{ scale:0.5 }} // Start off-screen and invisible
+whileInView={{ scale:1 }} // Fade in and move to the original position
+viewport={{ once: false }} // Ensure the animation triggers every time it enters the viewport
+transition={{ duration: 1.2, ease: "linear" }}
+className='skillbutton'>
     <span>{data}</span><i></i>
-</button>
+</motion.button>
 
     </div>
   )

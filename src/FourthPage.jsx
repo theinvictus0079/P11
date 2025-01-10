@@ -2,7 +2,7 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub} from "react-icons/fa";
 import "./App.css"
-
+import { motion } from "motion/react"
 
 const FourthPage = () => {
 
@@ -28,8 +28,20 @@ const FourthPage = () => {
 
 
 
-        <div className="md:text-5xl text-3xl text-red-700 font-bold">Any Queries ?</div>
-        <div className=" md:text-3xl  text-xl font-bold text-red-700 mt-6  mb-24 underline underline-offset-4">Feel Free To Contact</div>
+        <motion.div 
+        initial={{ x:150 }} // Start off-screen and invisible
+        whileInView={{ x:0 }} // Fade in and move to the original position
+        viewport={{ once: false }} // Ensure the animation triggers every time it enters the viewport
+        transition={{ duration: 1.2, ease: "linear" }}
+        className="md:text-5xl text-3xl text-red-700 font-bold">Any Queries ?
+        </motion.div>
+        <motion.div 
+        initial={{ x:-150 }} // Start off-screen and invisible
+        whileInView={{ x:0 }} // Fade in and move to the original position
+        viewport={{ once: false }} // Ensure the animation triggers every time it enters the viewport
+        transition={{ duration: 1.2, ease: "linear" }}
+        className=" md:text-3xl  text-xl font-bold text-red-700 mt-6  mb-24 underline underline-offset-4">Feel Free To Contact
+        </motion.div>
       
         
 
@@ -38,7 +50,7 @@ const FourthPage = () => {
           <div className="border  border-zinc-500 contact  w-[300px] md:w-[650px] h-16 md:h-28  flex justify-center items-center rounded-3xl">
             <div className=" text-4xl md:text-6xl text-red-500  flex justify-center items-center  ">
               <MdOutlineMailOutline />
-              <div className="underline  underline-offset-4 text-base md:text-4xl ml-3 font-bold md:font-normal text-zinc-300">
+              <div className="hover:text-red-500 underline  underline-offset-4 text-base md:text-4xl ml-3 font-bold md:font-normal text-zinc-300">
                 youremail@gmail.com
               </div>
             </div>
@@ -48,7 +60,7 @@ const FourthPage = () => {
            <a target="__blank" href="#">
            <div className=" text-4xl md:text-6xl text-blue-400  flex justify-center items-center  ">
               <FaLinkedin />
-              <div className="underline underline-offset-4 text-2xl md:text-4xl ml-3 text-zinc-300">
+              <div className="hover:text-red-500 underline underline-offset-4 text-2xl md:text-4xl ml-3 text-zinc-300">
                 linkedin 
               </div>
             </div>
@@ -63,7 +75,7 @@ const FourthPage = () => {
             <a target="__blank" href="#">
             <div className=" text-4xl md:text-6xl text-black   flex justify-center items-center  ">
               <FaGithub />
-              <div className=" underline underline-offset-4text-2xl md:text-4xl ml-3 text-zinc-300">
+              <div className=" hover:text-red-500 underline underline-offset-4text-2xl md:text-4xl ml-3 text-zinc-300">
               github
               </div>
             </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-
+import { motion } from "motion/react";
 const SocialIcons = () => {
   return (
     <div>
@@ -124,17 +124,22 @@ const SocialIcons = () => {
       </style>
 
       <div className="card">
-        <ul className="flex gap-8  md:flex-col w-[300px]  md:w-fit" >
-
+        <ul className="flex gap-8  md:flex-col w-[300px]  md:w-fit">
           <li className="iso-pro">
             <span></span>
             <span></span>
             <span></span>
 
             <a target="__blank" href="#">
-              <div className="svg text-red-600 text-5xl flex justify-center items-center">
+              <motion.div
+                initial={{ y: -250 }} // Start off-screen and invisible
+                whileInView={{ y: 0 }} // Fade in and move to the original position
+                viewport={{ once: false }} // Ensure the animation triggers every time it enters the viewport
+                transition={{ duration: 1.2, ease: "linear" }}
+                className="svg text-red-600 text-5xl flex justify-center items-center"
+              >
                 <FaLinkedin />
-              </div>
+              </motion.div>
             </a>
             <div className="text text-red-700">Linkedin</div>
           </li>
@@ -144,11 +149,17 @@ const SocialIcons = () => {
             <span></span>
             <span></span>
             <a target="__blank" href="#">
-            <div className="svg text-red-600 text-5xl flex justify-center items-center">
+              <motion.div
+                initial={{ y: -250 }} // Start off-screen and invisible
+                whileInView={{ y: 0 }} // Fade in and move to the original position
+                viewport={{ once: false }} // Ensure the animation triggers every time it enters the viewport
+                transition={{ duration: 1.2, ease: "linear" }}
+                className="svg text-red-600 text-5xl flex justify-center items-center"
+              >
                 <FaGithub />
-              </div>
+              </motion.div>
             </a>
-            
+
             <div className="text text-red-700">github</div>
           </li>
 
@@ -157,10 +168,15 @@ const SocialIcons = () => {
             <span></span>
             <span></span>
             <a target="__blank" href="#">
-            <div className="svg text-red-600 text-4xl flex justify-center items-center">
+              <motion.div
+                initial={{ y: -250 }} // Start off-screen and invisible
+                whileInView={{ y: 0 }} // Fade in and move to the original position
+                viewport={{ once: false }} // Ensure the animation triggers every time it enters the viewport
+                transition={{ duration: 1.2, ease: "linear" }}
+                className="svg text-red-600 text-4xl flex justify-center items-center"
+              >
                 <BsTwitterX />
-              </div>
-              
+              </motion.div>
             </a>
 
             <div className="text text-red-700">Twitter</div>
@@ -171,13 +187,18 @@ const SocialIcons = () => {
             <span></span>
             <span></span>
             <a target="__blank" href="#">
-            <div className="svg text-red-600 text-5xl flex justify-center items-center">
-            <FaInstagram />
-              </div>
+              <motion.div
+                initial={{ y: -250 }} // Start off-screen and invisible
+                whileInView={{ y: 0 }} // Fade in and move to the original position
+                viewport={{ once: false }} // Ensure the animation triggers every time it enters the viewport
+                transition={{ duration: 1.2, ease: "linear" }}
+                className="svg text-red-600 text-5xl flex justify-center items-center"
+              >
+                <FaInstagram />
+              </motion.div>
             </a>
             <div className="text text-red-700">Instagram</div>
           </li>
-
         </ul>
       </div>
     </div>
