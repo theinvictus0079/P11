@@ -37,13 +37,13 @@ transition={{ duration: 1.1, ease: "easeInOut" }} // Duration and smoothness
       <div className="card-overlay"></div>
       <div className="card-inner w-[300px] md:w-[310px] md:h-[390px] px-4 py-4 text-2xl md:text-4xl font-extrabold">
         Hi 👋🏻 I'm <br />
-        the invictus <br />
+        Alisha Khan <br />
         <h1 className="mt-3">I'm a </h1>
         <h1 className="mt-3 group-hover:underline underline-offset-4 font-agu">
           Web Developer
         </h1>
         <h1 className="mt-2 group-hover:underline underline-offset-4 font-agu">
-          Tech Enthusiast
+          Web designer
         </h1>
         <h1 className="mt-2 group-hover:underline underline-offset-4 font-agu">
           Blogger
